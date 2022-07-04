@@ -1,0 +1,179 @@
+* {
+    /* box-sizing: border-box; */
+}
+
+body {
+    padding: 0;
+    background: url(../img/back_main.jpg);
+    background-size: cover;
+}
+
+header {
+    border: 2px solid transparent;
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 10vh;
+    flex-direction: row;
+
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: rgb(165, 0, 130);
+    font-family: 'Hanalei Fill', cursive;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+}
+
+a:nth-child(1) {
+    filter: rotate(290deg);
+}
+
+a:hover {
+    background: rgb(255, 0, 166);
+    color: white;
+    box-shadow:
+        0 0 5px rgb(255, 0, 166),
+        0 0 25px rgb(255, 0, 166),
+        0 0 50px rgb(255, 0, 166),
+        0 0 200px rgb(255, 0, 166);
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(165, 0, 130));
+    animation: animate1 1s linear infinite;
+
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(165, 0, 130));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+a span:nth-child(3) {
+    bottom: 0%;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(165, 0, 130));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(165, 0, 130));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+
+main {
+    text-align: center;
+}
+
+h1 {
+    color: rgba(216, 216, 216, 0.2);
+    display: block;
+    margin: 300px auto 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+.backgraund_container {
+    padding: 20px 0 0 0;
+    margin: 0;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-50deg, rgba(0, 0, 0, 0.1), rgb(0, 5, 0), rgb(0, 0, 0), rgba(81, 97, 0, 0.1));
+    background-size: 400% 400%;
+    animation: backgraund_animation 20s ease infinite;
+}
+
+@keyframes backgraund_animation {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%
+    }
+}
+
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%
+    }
+}
